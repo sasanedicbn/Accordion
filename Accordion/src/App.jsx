@@ -1,12 +1,13 @@
 
 import './App.css'
 import Accordion from './Accordion'
+import questions from './Data'
 
 function App() {
 
   return (
     <>
-      <Accordion/>
+      <Accordion questions={questions}/>
     </>
   )
 }

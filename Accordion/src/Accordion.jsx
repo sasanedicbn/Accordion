@@ -11,8 +11,8 @@ const Accordion = ({question}) => {
        
       <section>
         <div className=" "> {question.title}
-            <button>+</button>
-            
+            <button onClick={showDescription}>+</button>
+            {active && question.info}
         </div>
       </section>
     )

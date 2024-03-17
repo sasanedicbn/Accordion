@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Accordion questions={questions}/>
+      {questions.map((question) => <Accordion question={question}/>)}
     </>
   )
 }

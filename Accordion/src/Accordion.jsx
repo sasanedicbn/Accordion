@@ -1,21 +1,31 @@
-import { useState } from "react";
 
-const Accordion = ({question}) => {
-    const [active, setActive] = useState(false)
+import React, { useState } from "react";
+import "./App.css"; 
 
-    function showDescription() {
-        setActive((active) => !active)
-    }
+const Accordion = ({ question }) => {
+  const [active, setActive] = useState(false);
 
-    return(
-       
-      <section>
-        <div className=" "> {question.title}
-            <button onClick={showDescription}>{active ? '-' : '+'}</button>
-            {active && question.info}
-        </div>
-      </section>
-    )
-}
+  function showDescription() {
+    setActive((active) => !active);
+  }
+
+  return (
+    <section className="accordion-section">
+      <div className="accordion-item">
+        <h2 className="accordion-title">{question.title}</h2>
+        <button
+          className={`accordion-toggle ${active ? "active" : ""}`}
+          onClick={showDescription}
+        >
+          {active ? "-" : "+"}
+        </button>
+      </div>
+      {active && (
+        <p className="accordion-info">{question.info}</p>
+      )}
+    </section>
+  );
+};
 
 export default Accordion;
+

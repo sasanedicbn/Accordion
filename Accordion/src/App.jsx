@@ -1,13 +1,12 @@
 
 import './App.css'
+import Accordion from './Accordion'
 
 function App() {
 
   return (
     <>
-    <div className='text-red-600'>
-      Sasa
-    </div>
+      <Accordion/>
     </>
   )
 }
